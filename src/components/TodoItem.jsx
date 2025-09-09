@@ -1,5 +1,12 @@
+import React from 'react'
+import { useToDoContext } from '../contexts/ToDoContext';
+
 function TodoItem({ todo }) {
+
+    const {editTodo, deleteTodo, toggleCompleted} = useToDoContext;
     
+
+    const
 
     return (
         <div
