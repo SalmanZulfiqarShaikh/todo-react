@@ -4,7 +4,7 @@ import { useToDoContext } from '../contexts/ToDoContext';
 function TodoForm() {
 
     const [todo, setTodo] = useState("");
-    const {addTodo} = useToDoContext;
+    const {addTodo} = useToDoContext();
     
     const add = (e) => {
         e.preventDefault();
@@ -19,7 +19,7 @@ function TodoForm() {
 
     return (
         <form onSubmit={add} className="flex">
-            <input value={{todo}}
+            <input value={todo}
             onChange={(e)=> setTodo(e.target.value)}
                 type="text"
                 placeholder="Write Todo..."
